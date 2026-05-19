@@ -279,11 +279,6 @@ def build_accuracy_figure(days_sorted, daily):
 def home_layout():
     return html.Div(
         [
-            html.H2("Learn Norwegian Quiz", style={"marginTop": "0"}),
-            html.P(
-                "Pick an answer.",
-                style={"color": THEME["muted"]},
-            ),
             html.Button(
                 "Start New Session",
                 id="start-quiz",
@@ -520,7 +515,7 @@ def start_quiz(_n_clicks):
         "finished": False,
         "questions": questions,
     }
-    return state, "Session started."
+    return state, ""
 
 
 @callback(
@@ -553,7 +548,26 @@ def render_quiz(state):
     options = [{"label": option, "value": option} for option in question["options"]]
     return (
         f"Question {idx + 1}/{max_score}",
-        f"What does '{question['word']}' mean?",
+        html.Div(
+            [
+                html.Div("What does this word mean?", style={"fontSize": "18px", "color": THEME["muted"]}),
+                html.Div(
+                    question["word"],
+                    style={
+                        "fontSize": "32px",
+                        "fontWeight": "800",
+                        "letterSpacing": "0.8px",
+                        "lineHeight": "1.2",
+                        "marginTop": "8px",
+                        "padding": "10px 14px",
+                        "display": "inline-block",
+                        "background": THEME["accent_soft"],
+                        "border": f"2px solid {THEME['accent']}",
+                        "borderRadius": "12px",
+                    },
+                ),
+            ]
+        ),
         options,
         None,
         "",
