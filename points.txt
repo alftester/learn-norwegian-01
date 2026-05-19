@@ -1,0 +1,10 @@
+Norwegian Word Game - Points Summary
+====================================
+Last session score: 5/5
+Total words learned: 10
+Sessions played: 2
+Average score: 5.00/5
+
+Recent sessions (latest first):
+1. 2026-05-19T11:51:58.125256 - 5/5
+2. 2026-05-19T11:47:42.846600 - 5/5
