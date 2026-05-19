@@ -1,6 +1,6 @@
 # Learn Words
 
-A simple command-line Norwegian vocabulary quiz game.
+A simple vibe command-line Norwegian vocabulary quiz game.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ A simple command-line Norwegian vocabulary quiz game.
 ## Project Files
 
 - `learn-words.py` - main quiz script
-- `norwegian_words.json` - word database (required)
+- `norwegian_words.json` - word database (required, but dont look)
 - `scores.json` - saved automatically after each session
 - `points.txt` - human-readable points summary (updated after each session)
 
